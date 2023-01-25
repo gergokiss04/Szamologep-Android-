@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.simpleapp"
+             BackgroundColor="WhiteSmoke"
+             >
+            
+    <ContentPage.Content>
+        
+        <StackLayout>
+
+            <Label TextColor="Black" FontAttributes="Bold,Italic"  FontSize="24" Text="Számológép"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label TextColor="Black" FontAttributes="Bold,Italic"  FontSize="18" Text="Kérem írjon be két számot a vonalra:" VerticalOptions="StartAndExpand"/>
+            <Label TextColor="Black" FontAttributes="Bold,Italic" Text="Első szám:"/>
+            
+            <Entry
+                x:Name="Fnumber" />
+            <Label TextColor="Black" FontAttributes="Bold,Italic" Text="Második szám:"/>
+            <Entry x:Name="Snumber" />
+            <Button FontAttributes="Bold,Italic" Text="Összeadás"  CornerRadius="100" BackgroundColor="DeepSkyBlue"  Clicked="osszeadas" />
+            <Button FontAttributes="Bold,Italic" Text="Kivonás" CornerRadius="100"  BackgroundColor="DeepSkyBlue" Clicked="kivonas" />
+            <Button FontAttributes="Bold,Italic" Text="Szorzás"  CornerRadius="100"  BackgroundColor="DeepSkyBlue"  Clicked="szorzas" />
+            <Button FontAttributes="Bold,Italic" Text="Osztás"  CornerRadius="100" BackgroundColor="DeepSkyBlue"  Clicked="osztas" />
+            <Label TextColor="Black" FontAttributes="Bold,Italic" FontSize="18" Text="Végösszeg:"  VerticalOptions="Center" />
+            <Entry x:Name="Total" VerticalOptions="StartAndExpand" />
+            <Button FontAttributes="Bold,Italic" x:Name="Retry" Text="Új számítás" CornerRadius="100" BackgroundColor="Green" IsVisible="false" Clicked="ujra"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
